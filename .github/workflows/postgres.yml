@@ -30,8 +30,7 @@ jobs:
         run: |
           apt-get update
           apt-get install --yes postgresql-client
-      - name: Query database
-        run: psql -h database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com -d core -U postgres -p 5432
+     
 
       - name: Connect to PostgreSQL
         
