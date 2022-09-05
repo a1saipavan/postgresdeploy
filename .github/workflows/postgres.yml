@@ -25,6 +25,7 @@ jobs:
           apt-get update
           apt-get install --yes postgresql-client
       - name: Query database
-        run: psql -h postgres -d postgres_db -U postgres_user -a -f test-dump.sql
+        run: psql -h postgres -U postgres_user -d postgres_db -a -f test-dump.sql
+      
         env:
           PGPASSWORD: postgres_password
