@@ -25,7 +25,13 @@ jobs:
           apt-get update
           apt-get install --yes postgresql-client
       - name: Query database
-        run: source test-dump.sql
+        run: psql \
+              --host=database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com \
+              --port=5432 \
+              --username=postgres \
+              --password \
+              --dbname=core 
+      - run: source test-dump.sql
       
         env:
           PGPASSWORD: postgres_password
