@@ -6,7 +6,7 @@ jobs:
     container: node:latest
     services:
       postgres:
-        image: postgres:latest
+        image: postgres
         env:
           POSTGRES_DB: postgres
           POSTGRES_PASSWORD: postgres
