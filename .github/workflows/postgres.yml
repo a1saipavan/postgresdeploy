@@ -25,10 +25,10 @@ jobs:
           apt-get update
           apt-get install --yes postgresql-client
         env:
-          working-directory: postgresdeploy/
+          working-directory: Migrations/scripts/
       - name: Query database
         run: |
-          cd postgresdeploy/
+          cd Migrations/scripts/
            psql \
             -f /__w/postgresdeploy/postgres/Migrations/scripts/postgres.sql \
             --host database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com \
