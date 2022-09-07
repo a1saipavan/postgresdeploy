@@ -2,7 +2,7 @@ name: PostgreSQL deployed
 on: push
 jobs:
   postgres:
-    runs-on: self-hosted
+    runs-on: postgres
     container: node:latest
     services:
       postgres:
