@@ -24,8 +24,12 @@ jobs:
         run: |
           apt-get update
           apt-get install --yes postgresql-client
+        env:
+          working-directory: Migrations/scripts/
       - name: Query database
-        run: psql -h database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com -d core -U postgres -p 5432 -f /__w/postgresdeploy/postgres/Migrations/scripts/postgres.sql
+        run: |
+          cd Migrations/scripts/
+          psql -h database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com -d core -U postgres -p 5432 -f postgres.sql
       
       
         env:
