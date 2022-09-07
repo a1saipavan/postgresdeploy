@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS uk_property_registry;
+
 CREATE TABLE uk_property_registry(
   transaction uuid,
   price numeric,
