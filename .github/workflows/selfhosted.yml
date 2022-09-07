@@ -28,7 +28,7 @@ jobs:
           working-directory: /__w/postgresdeploy/postgres/Migrations/scripts/
       - name: Query database
         run: |
-          find . -name “*.sql” | grep -i postgres
+          grep -RI postgres ~/
           
           psql -h database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com -d core -U postgres -p 5432 -f postgres.sql
       
