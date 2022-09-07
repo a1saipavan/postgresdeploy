@@ -2,7 +2,7 @@ name: PostgreSQL deploy
 on: push
 jobs:
   postgres:
-    runs-on: ubuntu-latest
+    runs-on: postgres-selfhost
     container: node:latest
     services:
       postgres:
