@@ -1,0 +1,32 @@
+name: PostgreSQL deploy
+on: push
+jobs:
+  postgres:
+    runs-on: self-hosted
+    container: node:latest
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_DB: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_PORT: 5432
+          POSTGRES_USER: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - name: Install PostgreSQL client
+        run: |
+          apt-get update
+          apt-get install --yes postgresql-client
+      - name: Query database
+        run: psql -h database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com -d core -U postgres -p 5432 -f Migrations/scripts/postgres.sql
+      
+      
+        env:
+          PGPASSWORD: postgres
