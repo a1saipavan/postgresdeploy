@@ -24,9 +24,11 @@ jobs:
         run: |
           apt-get update
           apt-get install --yes postgresql-client
+      - name: Query database
+        id: working
         env:
           working-directory: Migrations/scripts/
-      - name: Query database
+      
         run: |
           cd Migrations/scripts/
            psql \
