@@ -28,9 +28,9 @@ jobs:
           working-directory: /__w/postgresdeploy/postgres/Migrations/scripts/
       - name: Query database
         run: |
-          find ~/postgresdeploy -iname post*
           
-          psql -h database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com -d core -U postgres -p 5432 -f postgres.sql
+          
+          psql -h database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com -d core -U postgres -p 5432 -f /github/home/postgresdeploy/Migrations/scripts/postgres.sql
       
       
         env:
