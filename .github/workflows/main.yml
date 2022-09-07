@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - uses: ./ # Uses an action in the root directory
+      - uses: ./ # Use an action in the root directory
         with:
           POSTGRES_HOST: "database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com"
           POSTGRES_USER: "postgres"
