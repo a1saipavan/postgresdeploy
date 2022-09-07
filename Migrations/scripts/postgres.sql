@@ -1,20 +1,10 @@
-DROP TABLE IF EXISTS uk_property_registry;
-
-CREATE TABLE uk_property_registry(
-  transaction uuid,
-  price numeric,
-  transfer_date date,
-  postcode text,
-  property_type char(1),
-  newly_built boolean,
-  duration char(1),
-  paon text,
-  saon text,
-  street text,
-  locality text,
-  city text,
-  district text,
-  county text,
-  ppd_category_type char(1),
-  record_status char(1)
+CREATE TABLE account_roles (
+  user_id INT NOT NULL,
+  role_id INT NOT NULL,
+  grant_date TIMESTAMP,
+  PRIMARY KEY (user_id, role_id),
+  FOREIGN KEY (role_id)
+      REFERENCES roles (role_id),
+  FOREIGN KEY (user_id)
+      REFERENCES accounts (user_id)
 );
