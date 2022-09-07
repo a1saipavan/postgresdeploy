@@ -23,4 +23,4 @@ jobs:
           POSTGRES_USER: "postgres"
           POSTGRES_PASSWORD: "postgres"
           POSTGRES_PORT: 5432
-          DATABASE_DUMP_PATH: "./postgres.sql"
+          DATABASE_DUMP_PATH: "./Migrations/scripts/postgres.sql"
