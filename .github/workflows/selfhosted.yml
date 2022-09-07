@@ -30,7 +30,7 @@ jobs:
         run: |
           
           pwd
-          psql -h database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com -d core -U postgres -p 5432 -f /github/home/postgresdeploy/Migrations/scripts/postgres.sql
+          psql -h database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com -d core -U postgres -p 5432 -f /github/home/postgresdeploy/postgresdeploy/Migrations/scripts/postgres.sql
       
       
         env:
