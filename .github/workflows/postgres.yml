@@ -25,8 +25,8 @@ jobs:
           apt-get update
           apt-get install --yes postgresql-client
       - name: Query database
-        run: psql -h database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com -U postgres -p 5432 -d core -c 'SELECT 1;
-            
+        run: psql -h database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com -d core -U postgres  -c 'SELECT 1;'
+         
       
       
         env:
