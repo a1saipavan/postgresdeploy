@@ -26,15 +26,14 @@ jobs:
           apt-get install --yes postgresql-client
       - name: Query database
         run: |
+          cd postgresdeploy
            psql \
-              -f /__w/postgresdeploy/postgres/Migrations/scripts/postgres.sql \
-              --host database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com \
-              --port 5432 \
-              --username postgres \
-            
-              --dbname core
+            -f /__w/postgresdeploy/postgres/Migrations/scripts/postgres.sql \
+            --host database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com \
+            --port 5432 \
+            --username postgres \
+            --dbname core
          
-      
       
         env:
           PGPASSWORD: postgres
