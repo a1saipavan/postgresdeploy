@@ -28,8 +28,8 @@ jobs:
           working-directory: Migrations/scripts/
       - name: Query database
         run: |
-          pwd && ll && ls
-          psql -h database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com -d core -U postgres -p 5432 -f postgres.sql
+          pwd && ls
+          psql -h database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com -d core -U postgres -p 5432 -f ./postgres.sql
       
       
         env:
