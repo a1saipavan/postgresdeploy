@@ -25,7 +25,14 @@ jobs:
           apt-get update
           apt-get install --yes postgresql-client
       - name: Query database
-        run: psql -h database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com -d core -U postgres  -f ./postgres.sql
+        run: |
+           psql \
+              -f /__w/postgresdeploy/postgres/Migrations/scripts/postgres.sql \
+              --host database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com \
+              --port 5432 \
+              --username postgres \
+              --password \
+              --dbname core
          
       
       
