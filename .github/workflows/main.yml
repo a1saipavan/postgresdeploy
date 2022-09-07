@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: postgres-selfhost
 
     services:
       postgres:
@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ./ # Uses an action in the root directory
         with:
-          POSTGRES_HOST: "database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com"
+          POSTGRES_HOST: "database-2.cnueudck5tkx.us-east-1.rds.amazonaws.com"
           POSTGRES_USER: "postgres"
           POSTGRES_PASSWORD: "postgres"
           POSTGRES_PORT: 5432
