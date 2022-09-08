@@ -2,6 +2,7 @@ name: PostgreSQL deploy qa
 on: 
   push:
     branches: [ qa ]
+  workflow_dispatch:
     
 jobs:
   postgres:
