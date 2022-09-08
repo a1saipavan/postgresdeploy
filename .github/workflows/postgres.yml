@@ -1,5 +1,8 @@
 name: PostgreSQL deploy qa
-on: push
+on: 
+  push:
+    branches: [ qa ]
+    
 jobs:
   postgres:
     runs-on: self-hosted
