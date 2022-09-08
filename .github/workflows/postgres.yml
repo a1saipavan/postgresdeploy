@@ -1,5 +1,6 @@
 name: PostgreSQL deploy
 on: push
+
 jobs:
   postgres:
     runs-on: self-hosted
