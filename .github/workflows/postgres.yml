@@ -1,4 +1,4 @@
-name: PostgreSQL deploy qa
+name: PostgreSQL deployed qa
 on: 
   push:
     branches: [ qa ]
