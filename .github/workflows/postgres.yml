@@ -1,4 +1,4 @@
-name: PostgreSQL deploy qa
+name: PostgreSQL deploy
 on: push
 jobs:
   postgres:
