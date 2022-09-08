@@ -29,8 +29,8 @@ jobs:
       - name: Query database
         run: |
           
-          pwd && cd /github/home && ls
-          psql -h database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com -d core -U postgres -p 5432 -f /github/home/postgresdeploy/postgresdeploy/Migrations/scripts/postgres.sql
+        
+          psql -h database-1.cnueudck5tkx.us-east-1.rds.amazonaws.com -d core -U postgres -p 5432 -f postgres.sql
       
       
         env:
